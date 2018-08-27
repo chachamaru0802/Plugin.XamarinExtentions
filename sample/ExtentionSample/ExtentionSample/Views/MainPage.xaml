@@ -8,7 +8,7 @@
     <StackLayout Margin="5">
         <Entry>
             <Entry.Effects>
-                <effects:EntryBorder/>
+                <effects:EntryBorder LineColor="Red"/>
             </Entry.Effects>
         </Entry>
     </StackLayout>

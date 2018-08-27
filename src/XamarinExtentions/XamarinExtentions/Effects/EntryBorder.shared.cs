@@ -7,6 +7,8 @@ namespace Plugin.XamarinExtentions.Effects
 {
     public class EntryBorder : RoutingEffect
     {
+        public Color LineColor { get; set; } = Color.Black;
+
         public EntryBorder() : base(EffectIds.EntryBorder)
         {
         }

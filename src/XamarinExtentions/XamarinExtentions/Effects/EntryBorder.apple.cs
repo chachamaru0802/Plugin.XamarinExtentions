@@ -15,6 +15,7 @@ namespace Plugin.XamarinExtentions.Effects.iOS
     {
         protected override void OnAttached()
         {
+
         }
 
         protected override void OnDetached()

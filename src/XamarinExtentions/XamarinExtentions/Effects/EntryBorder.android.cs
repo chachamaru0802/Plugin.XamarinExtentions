@@ -6,6 +6,7 @@ using Android.Text;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
@@ -33,8 +34,11 @@ namespace Plugin.XamarinExtentions.Effects.Droid
                 return;
             }
 
+            var effect = (RoutingEffects.EntryBorder)Element.Effects.FirstOrDefault(x => x is RoutingEffects.EntryBorder);
+            var lineColor = effect.LineColor;
+                
             var shape = new ShapeDrawable();
-            shape.Paint.Color = Xamarin.Forms.Color.Black.ToAndroid();
+            shape.Paint.Color = lineColor.ToAndroid();
             shape.Paint.SetStyle(Paint.Style.Stroke);
             editText.Background = shape;
         }
