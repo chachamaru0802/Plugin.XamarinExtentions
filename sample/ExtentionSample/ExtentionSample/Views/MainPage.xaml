@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:effects="clr-namespace:Plugin.XamarinExtentions.Effects;assembly=Plugin.XamarinExtentions"
+             xmlns:controls="clr-namespace:Plugin.XamarinExtentions.Controls;assembly=Plugin.XamarinExtentions"
              x:Class="ExtentionSample.Views.MainPage"
              Title="{Binding Title}">
 
@@ -11,6 +12,8 @@
                 <effects:EntryBorder LineColor="Red"/>
             </Entry.Effects>
         </Entry>
+
+        <controls:IconEntry IconFont="user" IconColor="Black"   />
     </StackLayout>
 
 </ContentPage>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Plugin.XamarinExtentions.Models;
 
-namespace Plugin.XamarinExtentions.Fonts
+namespace Plugin.XamarinExtentions.Extentions
 {
     public class FontAwesomeRegularModule : IconFontModule
     {

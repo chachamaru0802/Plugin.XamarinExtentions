@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Plugin.XamarinExtentions.Fonts
+namespace Plugin.XamarinExtentions.Extentions
 {
     public static class FontAwesomeCollection
     {
