@@ -85,7 +85,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Extentions\" />
+    <Compile Include="Extentions\CollectionExtentions.cs" />
+    <Compile Include="Fonts\FontAwesomeBrandsModule.cs" />
+    <Compile Include="Fonts\FontAwesomeCollection.cs" />
+    <Compile Include="Fonts\FontAwesomeRegularModule.cs" />
+    <Compile Include="Fonts\FontAwesomeSolidModule.cs" />
+    <Compile Include="Fonts\IIconFontModule.cs" />
+    <Compile Include="Models\IconFont.cs" />
   </ItemGroup>
 
   <!--Additional item groups-->

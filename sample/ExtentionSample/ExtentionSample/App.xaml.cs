@@ -24,6 +24,8 @@ namespace ExtentionSample
         {
             InitializeComponent();
 
+            Plugin.XamarinExtentions.IconFontInitializer.Init();
+
             await NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
 
