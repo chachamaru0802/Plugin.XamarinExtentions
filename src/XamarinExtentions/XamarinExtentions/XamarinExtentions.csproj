@@ -76,6 +76,10 @@
     -->
   </ItemGroup>
 
+  <ItemGroup>
+    <FontFiles Include="*.otf;*.ttf" />
+  </ItemGroup>
+
   <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
     <Compile Include="**\*.android.cs" />
   </ItemGroup>
@@ -85,9 +89,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <FontFiles Remove="FontAwesomeBrands.otf" />
+    <FontFiles Remove="FontAwesomeRegular.otf" />
+    <FontFiles Remove="FontAwesomeSolid.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Extentions\FontAwesomeBrands.otf" />
     <None Remove="Extentions\FontAwesomeRegular.otf" />
     <None Remove="Extentions\FontAwesomeSolid.otf" />
+    <None Remove="FontAwesomeBrands.otf" />
+    <None Remove="FontAwesomeRegular.otf" />
+    <None Remove="FontAwesomeSolid.otf" />
   </ItemGroup>
 
   <ItemGroup>
