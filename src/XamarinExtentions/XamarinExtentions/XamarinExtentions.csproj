@@ -77,7 +77,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <FontFiles Include="*.otf;*.ttf" />
+    <FontFiles Include="*.otf" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+    <Folder Include="Assets\" />
+    <AndroidAsset Include="*.otf" Link="Assets\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+    <TfmSpecificPackageFile Include="*.otf" BuildAction="BundleResource" PackagePath="contentFiles\any\$(TargetFramework)\Resources\" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
