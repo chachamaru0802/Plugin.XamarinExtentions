@@ -9,7 +9,7 @@ namespace Plugin.XamarinExtentions
 {
     public static class IconFontInitializer
     {
-        public static IReadOnlyCollection<IIconFontModule> IconFontModules { get; private set; } 
+        public static IReadOnlyCollection<IIconFontModule> IconFontModules { get; private set; }
 
         public static void Init()
         {
@@ -20,6 +20,11 @@ namespace Plugin.XamarinExtentions
             moduleList.Add(new FontAwesomeSolidModule());
 
             IconFontModules = moduleList;
+        }
+
+        public static IIconFontModule FindModule(IIconFont icon)
+        {
+            return IconFontModules.FirstOrDefault(x => x.HasIcon(icon));
         }
 
         public static IIconFont FindIconForKey(String iconKey)
