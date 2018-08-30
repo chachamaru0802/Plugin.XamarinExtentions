@@ -65,7 +65,7 @@ namespace Plugin.XamarinExtentions.Extentions
             {
                 AntiAlias = true,
                 Color = Android.Graphics.Color.Black,
-                TextAlign = Paint.Align.Center,
+                TextAlign = Paint.Align.Left,
                 UnderlineText = false
             };
             _paint.SetStyle(Paint.Style.Fill);
@@ -75,7 +75,7 @@ namespace Plugin.XamarinExtentions.Extentions
 
         public IconDrawable SizePx(Int32 size)
         {
-            _size = size;
+            _size = size - 10;
             SetBounds(0, 0, size, size);
             InvalidateSelf();
             return this;
@@ -92,7 +92,7 @@ namespace Plugin.XamarinExtentions.Extentions
         {
             var bounds = Bounds;
             var height = bounds.Height();
-            _paint.TextSize = height;
+            _paint.TextSize = _size ;
             var textBounds = new Rect();
             var textValue = _icon.Character.ToString();
             _paint.GetTextBounds(textValue, 0, 1, textBounds);

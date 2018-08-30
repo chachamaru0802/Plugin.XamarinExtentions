@@ -9,7 +9,7 @@ using Shared = Plugin.XamarinExtentions.Controls;
 using Platform = Plugin.XamarinExtentions.Controls.Droid;
 using Plugin.XamarinExtentions.Extentions;
 
-[assembly:ExportRenderer(typeof(Shared.IconEntry),typeof(Platform.IconEntry))]
+[assembly: ExportRenderer(typeof(Shared.IconEntry), typeof(Platform.IconEntry))]
 
 namespace Plugin.XamarinExtentions.Controls.Droid
 {
@@ -25,7 +25,7 @@ namespace Plugin.XamarinExtentions.Controls.Droid
         {
             base.OnElementChanged(e);
 
-            if(Control ==null)
+            if (Control == null)
             {
                 return;
             }
@@ -35,7 +35,7 @@ namespace Plugin.XamarinExtentions.Controls.Droid
 
         void UpdateIconFont()
         {
-            if(string.IsNullOrWhiteSpace(Entry.IconFont))
+            if (string.IsNullOrWhiteSpace(Entry.IconFont))
             {
                 return;
             }
@@ -45,7 +45,13 @@ namespace Plugin.XamarinExtentions.Controls.Droid
             var drawable = new IconDrawable(Context, icon).Color(Entry.IconColor.ToAndroid())
                                                            .SizeDp((Int32)Entry.FontSize);
 
+
+            Control.CompoundDrawablePadding = (Int32)Entry.FontSize * 2 + 10;
+
+
             Control.SetCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null);
+
         }
+
     }
 }
