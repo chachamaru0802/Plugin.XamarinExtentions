@@ -1,6 +1,7 @@
 ﻿using Foundation;
 using Prism;
 using Prism.Ioc;
+using System.Linq;
 using UIKit;
 
 
@@ -27,8 +28,20 @@ namespace ExtentionSample.iOS
 
             Plugin.XamarinExtentions.Initializer.Init();
 
+            foreach (var familyName in UIFont.FamilyNames.OrderBy(x => x))
+            {
+                System.Console.WriteLine($"Family: {familyName}");
+                foreach (var name in UIFont.FontNamesForFamilyName(familyName).OrderBy(y => y))
+                {
+                    System.Console.WriteLine(name);
+                }
+            }
+
+
             return base.FinishedLaunching(app, options);
         }
+
+
     }
 
     public class iOSInitializer : IPlatformInitializer
@@ -38,4 +51,5 @@ namespace ExtentionSample.iOS
 
         }
     }
+
 }

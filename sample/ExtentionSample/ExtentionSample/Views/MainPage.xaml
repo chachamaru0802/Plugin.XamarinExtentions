@@ -13,7 +13,11 @@
             </Entry.Effects>
         </Entry>
 
-        <controls:IconEntry IconFont="user" IconColor="Black"   />
+        <controls:IconEntry IconFont="user" IconColor="Black"  >
+            <controls:IconEntry.Effects>
+                <effects:EntryBorder/>
+            </controls:IconEntry.Effects>
+        </controls:IconEntry>
     </StackLayout>
 
 </ContentPage>
