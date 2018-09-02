@@ -120,6 +120,7 @@
     <Compile Include="Extentions\FontAwesomeSolidModule.cs" />
     <Compile Include="Extentions\IIconFontModule.cs" />
     <Compile Include="Models\IconFont.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
   </ItemGroup>
 
   <!--Additional item groups-->

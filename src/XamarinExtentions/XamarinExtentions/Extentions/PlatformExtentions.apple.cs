@@ -30,5 +30,8 @@ namespace Plugin.XamarinExtentions.Extentions
                 return image.ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
             }
         }
+
+        public static UIFont ToUIFont(this IIconFontModule module, nfloat size) => UIFont.FromName(module.FontName, size);
+
     }
 }

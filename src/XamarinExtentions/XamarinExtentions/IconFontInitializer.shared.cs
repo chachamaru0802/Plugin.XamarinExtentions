@@ -34,5 +34,7 @@ namespace Plugin.XamarinExtentions
 
             return IconFontModules.FirstOrDefault(x => x.Keys.Contains(iconKey))?.GetIcon(iconKey);
         }
+
+        public static IIconFontModule FindModuleOf(IIconFont icon) => IconFontModules.FirstOrDefault(x => x.HasIcon(icon));
     }
 }

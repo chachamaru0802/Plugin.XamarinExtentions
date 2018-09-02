@@ -7,6 +7,7 @@ using Platform = Plugin.XamarinExtentions.Controls.iOS;
 using Xamarin.Forms.Platform.iOS;
 using Plugin.XamarinExtentions.Extentions;
 using UIKit;
+using CoreGraphics;
 
 [assembly: ExportRenderer(typeof(Shared.IconEntry), typeof(Platform.IconEntry))]
 
@@ -39,8 +40,19 @@ namespace Plugin.XamarinExtentions.Controls.iOS
 
             var image = icon.ToUIImage((nfloat)(-1.0));
 
-            var imageView =new UIImageView();
+            var imageView =new UIImageView(new CGRect(0,0,30,30));
             imageView.Image = image;
+
+            var label = new UILabel(new CGRect(0, 0, 30, 30));
+            var font = IconFontInitializer.FindModuleOf(icon)?.ToUIFont(20);
+            label.Text = $"{icon.Character}";
+
+            if(font != null)
+            {
+                label.Font = font;
+            }
+           
+
 
             Control.LeftView = imageView;
             Control.LeftViewMode = UITextFieldViewMode.Always;
