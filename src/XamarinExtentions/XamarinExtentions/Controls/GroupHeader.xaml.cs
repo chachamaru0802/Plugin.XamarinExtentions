@@ -65,22 +65,7 @@ namespace Plugin.XamarinExtentions.Controls
 
         #endregion
 
-        #region BackgroundColor
-
-
-        /// <summary>
-        /// BackgroundColor
-        /// </summary>
-        public Color BackgroundColor
-        {
-            get => View.BackgroundColor;
-            set => View.BackgroundColor = value;
-        }
-
-        #endregion
-
         #region BorderColor
-
 
         /// <summary>
         /// BorderColor
