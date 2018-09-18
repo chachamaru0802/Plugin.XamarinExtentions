@@ -113,6 +113,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Controls\GroupHeader.xaml.cs" />
     <Compile Include="Extentions\CollectionExtentions.cs" />
     <Compile Include="Extentions\FontAwesomeBrandsModule.cs" />
     <Compile Include="Extentions\FontAwesomeCollection.cs" />
@@ -121,6 +122,12 @@
     <Compile Include="Extentions\IIconFontModule.cs" />
     <Compile Include="Models\IconFont.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Controls\GroupHeader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <!--Additional item groups-->

@@ -7,6 +7,8 @@
              Title="{Binding Title}">
 
     <StackLayout Margin="5">
+        <controls:GroupHeader HeaderTitle="bbb" BorderColor="Red" BackgroundColor="LightBlue" TextColor="Blue" />
+
         <Entry>
             <Entry.Effects>
                 <effects:EntryBorder LineColor="Red"/>

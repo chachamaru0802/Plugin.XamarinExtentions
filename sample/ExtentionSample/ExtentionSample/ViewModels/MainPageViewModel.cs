@@ -10,6 +10,8 @@ namespace ExtentionSample.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
+        public string LabelTitle => "aa";
+
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {

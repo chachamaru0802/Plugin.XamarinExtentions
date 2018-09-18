@@ -92,6 +92,10 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\src\XamarinExtentions\XamarinExtentions\XamarinExtentions.csproj">
+      <Project>{8211a0b9-a62a-4a7b-9eb8-6db0e739058b}</Project>
+      <Name>XamarinExtentions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ExtentionSample\ExtentionSample.csproj">
       <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
       <Name>ExtentionSample</Name>

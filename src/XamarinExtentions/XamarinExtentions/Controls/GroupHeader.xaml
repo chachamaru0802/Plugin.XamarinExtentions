@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Plugin.XamarinExtentions.Controls.GroupHeader"
+             BackgroundColor="LightGray"
+             x:Name="View">
+    <ContentView.Content>
+        <StackLayout >
+            <BoxView x:Name="HeaderBorder" HeightRequest="1" BackgroundColor="Gray"/>
+
+            <Label x:Name="HeaderLabel" Text="{Binding HeaderTitle}" FontSize="Large" Margin="10,0,0,0" />
+
+            <BoxView x:Name="FooterBorder" HeightRequest="1" BackgroundColor="Gray"/>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
